@@ -21,7 +21,7 @@ namespace Emailverification
             {
                 for (int j = 0; j < unAcceptedCharacters.Length; j++)
                 {
-                    if (_Email[i] == ' ' || _Email[0] == '@' || _Email[i] == unAcceptedCharacters[j])
+                    if (_Email[i] == ' ' || _Email[0] == '@' || _Email[i] == unAcceptedCharacters[j] || _Email.Length>320 || !_Email.Contains('@') || !_Email.EndsWith(".com") || _Email.)
                     {
                         conformation = false;
                         goto LoopEnd;
