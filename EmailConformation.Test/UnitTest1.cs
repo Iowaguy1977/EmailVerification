@@ -10,6 +10,10 @@ namespace EmailValidation.Test
         EmailConformation conformation=new EmailConformation();
         [Theory]
         [InlineData("Superjoc@icloud.com", true)]
+        [InlineData("Superjoc@icloud.c.om", true)]
+        [InlineData("Superjocicloud.com", true)]
+        [InlineData("@icloud.com", true)]
+
         public void EmailAddressShouldPass(String EmailAddress, Boolean Expected)
         {
             //Arrage
